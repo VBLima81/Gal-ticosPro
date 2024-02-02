@@ -1,0 +1,678 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ///////////..utility classes../////////// */
+
+.boxer {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
+}
+
+.btn-primary {
+  letter-spacing: 0.1cm;
+  color: #0c0c0c;
+  background: rgb(229, 240, 84);
+  font-family: 'Anton', sans-serif;
+}
+
+.btn-primary:hover {
+  background:rgb(181, 21, 245);
+  transition: background 0.3s ease-in-out;
+  font-family: 'Anton', sans-serif;
+}
+
+/* ............/navbar/............ *
+/* desktop mode............/// */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  width: 100%;
+  background: rgb(229, 240, 84);
+  color: rgb(107, 36, 89);
+  opacity: 1;
+  height: 50px;
+  z-index: 12;
+}
+
+.navbar-boxer {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  font-family: roboto sans-serif;
+  order: 2;
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: rgb(24, 20, 20);
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  color: #97046b;
+  transition: color 0.3s ease-in-out;
+}
+
+.logo {
+  font-family: 'Shadows Into Light Two', cursive;
+  order: 1;
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ............//// Showcase styling ////......... */
+
+.showcase-area {
+  height: 80vh;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.144),
+      rgba(255, 255, 255, 0.336)
+    ),
+    url("/image/estad.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.showcase-boxer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.main-title {
+  font-family: 'Shadows Into Light Two', cursive;
+  text-transform: uppercase;
+  margin-top: 1.5em;
+  font-size: 4.5rem;
+}
+
+.subt {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 1.5rem;
+}
+
+/* ......//about us//...... */
+
+#about {
+  padding: 50px 0;
+  background: #070707;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#about h2 {
+  font-size: 2.3rem;
+}
+
+#about p {
+  font-family: roboto sans serif;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+#about .small {
+  font-family: barlow semi condensed sans-serif;
+  font-size: 2rem;
+  color: rgb(156, 156, 158);
+  font-weight: 600;
+}
+
+.about-img {
+  flex: 1 1 400px;
+  padding: 30px;
+  transform: translateX(150%);
+  animation: about-img-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-img-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+  transform: translate(-150%);
+  animation: about-text-animation 1s ease-in-out forwards;
+  text-align: justify;
+}
+
+@keyframes about-text-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-img img {
+  display: block;
+  height: 600px;
+  max-width: 140%;
+  object-fit: cover;
+  
+}
+
+/* ..........////Food category///........... */
+
+
+#food {
+  padding: 5rem 0 10rem 0;
+  background: url("/image/fundo1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#food h2 {
+  text-align: center;
+  font-family: 'Antonio', sans-serif;
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: rgb(8, 8, 8);
+}
+
+.food-boxer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.food-boxer img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img-boxer {
+  margin: 0 1rem;
+  position: relative;
+}
+
+.img-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  text-align: center;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.img-content h3 {
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.img-content a {
+  font-size: 1.2rem;
+}
+
+.img-boxer::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.871);
+  opacity: 0;
+  z-index: 1;
+
+  transform: scaleY(0);
+  transform-origin: 100% 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.img-boxer:hover::after {
+  opacity: 0.5;
+  transform: scaleY(1);
+}
+
+.img-boxer:hover .img-content {
+  opacity: 1;
+  top: 40%;
+}
+
+/* .........../Food Menu/............ */
+
+.food-menu-heading {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 3.4rem;
+  font-weight: 400;
+  color: rgb(14, 13, 13);
+}
+
+.food-menu-boxer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0px 30px 0px;
+}
+
+.food-menu-boxer img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.food-menu-item {
+  display: flex;
+  flex: 1 1 600px;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+
+.food-description {
+  margin: auto 1.5rem;
+}
+
+.font-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #444;
+}
+
+.food-description p {
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* ........./ Testimonial /.......... */
+
+#testimonials h2 {
+  padding: 4rem 0;
+  background: url("/image/fundo1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: 'Antonio', sans-serif;
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: rgb(8, 8, 8);
+}
+
+.testimonial-title {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: rgb(10, 10, 10);
+}
+
+.testimonial-boxer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+.testimonial-box {
+  text-align: center;
+  padding: 1rem;
+}
+
+.customer-photo img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/* ........ Contact Us........... */
+
+#contact {
+  padding: 5rem 0;
+  background: url("/image/fundo1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-container {
+  display: flex;
+  background: #c7c6c6;
+}
+
+.contact-img {
+  width: 50%;
+}
+
+.contact-img img {
+  display: block;
+  height: 500px;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.form-container {
+  padding: 1rem;
+  width: 50%;
+  margin: auto;
+}
+
+.form-container input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  padding: 1rem 0;
+  box-shadow: none;
+  outline: none;
+  margin-bottom: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.form-container textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  color: #444;
+  outline: none;
+  padding: 1rem 0;
+  resize: none;
+  background: rgb(253, 249, 249);
+}
+
+.form-container h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #660d44;
+  margin-bottom: 1rem;
+  margin-top: -1.2rem;
+}
+
+.form-container a {
+  font-size: 1.3rem;
+}
+
+#footer h2 {
+  text-align: center;
+  font-size: 1rem;
+  padding: 2.6rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgb(8, 8, 8);
+}
+
+/**começo diretoria**/
+
+.boxers {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  font-family: cursive;
+}
+.boxers .card {
+  position: relative;
+}
+.boxers .card .face {
+  width: 300px;
+  height: 200px;
+  transition: 0.4s;
+}
+.boxers .card .face.front {
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+.boxers .card:hover .face.front {
+  transform: translateY(0);
+  box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+    0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+}
+.boxers .card:nth-child(2):hover .face.front {
+  box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px rgb(255, 208, 0),
+    inset -20px 0 80px rgb(255, 196, 0), inset 20px 0 300px rgb(255, 182, 46),
+    inset -20px 0 300px rgb(255, 153, 0), 0 0 50px #0098be,
+    -10px 0 80px rgb(255, 174, 0), 10px 0 80px rgb(0, 162, 255);
+}
+.boxers .card:nth-child(3):hover .face.front {
+  box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px rgb(63, 41, 16),
+    inset -20px 0 80px rgb(26, 11, 2), inset 20px 0 300px rgb(24, 19, 5),
+    inset -20px 0 300px rgb(53, 27, 13), 0 0 50px #ffca7f,
+    -10px 0 80px rgb(70, 45, 8), 10px 0 80px rgb(51, 40, 32);
+}
+.boxers .card .face.front .content {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  transition: 0.5s;
+  text-align: center;
+}
+.boxers .card:hover .face.front .content {
+  opacity: 1;
+}
+.boxers .card .face.front .content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.boxers .card .face.front .content i {
+  font-size: 3em;
+  color: white;
+  display: inline-block;
+}
+.boxers .card .face.front .content h3 {
+  font-size: 1em;
+  color: white;
+  text-align: center;
+}
+.boxers .card .face.front .content a {
+  transition: 0.5s;
+}
+.boxers .card .face.back {
+  position: relative;
+  background-color: #ffffff;
+  background-image: linear-gradient(160deg, #ffffff 0%, #ffdeff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  transform: translateY(-100px);
+}
+.boxers .card:hover .face.back {
+  transform: translateY(0);
+}
+.boxers .card .face.back .content p,
+button {
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+.boxers .card .face.back .content button {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px;
+  margin: 15px 0 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #333;
+  border-radius: 6px;
+}
+.boxers .card .face.back .content button:hover {
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-device-width: 900px) {
+  /* .menu { width:100%; } */
+  }
+
+@media only screen and (max-device-width: 900px) {
+  /* .menu { width:600px; } */
+  }
+
+  @media only screen and (max-device-width: 700px) {
+    /* .menu { width:400px; } */
+    }
+
+
+@media (max-width: 768px){
+
+  .logo {
+    display: none;
+  }
+
+  .menu-items li {
+    font-size: 15px;
+    margin: 2px;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .subt {
+    font-size: 1rem;
+  }
+
+  .about-img img {
+    display: block;
+    height: 300px;
+    max-width: 140%;
+    object-fit: cover;
+  }
+
+  #food h2{
+    font-size: 2rem;
+  }
+
+  #food h3 {
+    font-size: 1rem;
+  }
+
+  .form-container h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .contact-img {
+    display: none;
+  }
+
+  .form-container {
+    padding: 1rem;
+    width: 100%;
+    margin: auto;
+  }
+
+  .form-container input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+  }
+  
+  .form-container textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    color: #444;
+    outline: none;
+    padding: 1rem 0;
+    resize: none;
+    background: rgb(253, 249, 249);
+  }
+
+  .btn btn-primary {
+    text-align: center;
+    color: #fff;
+    background: #adadad;
+    font-family: cursive;
+  }
+
+}
+
+ 
